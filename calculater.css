@@ -1,0 +1,53 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 98vw;
+}
+h1{
+text-transform: uppercase;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 100%;
+    /* background-color: aqua; */
+
+}
+.screen{
+    height: 30%;
+    width: 100%;
+    font-size: xx-large;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    /* color: aliceblue; */
+    display: flex;
+    justify-content:right;
+    align-items:end;
+    
+}
+.icons{
+    height: 65%;
+    width: 98%;
+    display: grid;
+    grid-template-columns:repeat(5,20%);
+    grid-template-rows:repeat(5,20%);
+    gap: 2px;
+
+    box-sizing: border-box;
+    
+}
+button{
+    height: 100%;
+    width: 100%;
+    font-size: xx-large;
+}
+button:hover{
+    background-color: rgb(38, 47, 38);
+    scale: 0.95;
+    color:aliceblue;
+}
