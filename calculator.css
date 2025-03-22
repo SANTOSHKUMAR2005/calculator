@@ -1,4 +1,8 @@
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -8,20 +12,24 @@ body{
 }
 h1{
 text-transform: uppercase;
+height: 5%;
+padding-bottom: 1%;
 }
 .main{
     display: flex;
     flex-direction: column;
-    height: 95%;
+    align-items: center;
+    height: 90%;
     width: 100%;
-    /* background-color: aqua; */
 
 }
 .screen{
     height: 30%;
-    width: 100%;
+    width: 80%;
+    padding: 1%;
+    box-sizing: border-box;
     font-size: xx-large;
-    background-color: aliceblue;
+    background:linear-gradient(25deg ,rgb(128, 115, 115), rgb(181, 233, 133));
     border-radius: 5px;
     margin-bottom: 1%;
     /* color: aliceblue; */
@@ -31,23 +39,44 @@ text-transform: uppercase;
     
 }
 .icons{
-    height: 65%;
-    width: 98%;
+    height: 70%;
+    width: 80%;
     display: grid;
-    grid-template-columns:repeat(4,20%);
+    grid-template-columns:repeat(4,25%);
     grid-template-rows:repeat(5,20%);
     gap: 2px;
 
     box-sizing: border-box;
     
 }
+.child{
+
+}
 button{
     height: 100%;
     width: 100%;
     font-size: xx-large;
+    background:linear-gradient(25deg ,rgb(128, 115, 115), rgb(181, 233, 133));
+
 }
 button:hover{
     background-color: rgb(38, 47, 38);
     scale: 0.95;
     color:aliceblue;
+}
+
+@media(max-width:1000px){
+    body{
+        height: 100vh;
+        width: 98vw;
+    }
+    .screen{
+        width: 100%;
+    }
+    
+    .icons{
+        width: 100%;
+        grid-template-columns:repeat(4,25%);
+        grid-template-rows:repeat(5,20%);
+    }
 }
