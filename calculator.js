@@ -19,6 +19,7 @@ function makeString(e){
     }
     else if(a=='='){
         v=evaluatValue(v);
+        if(v!="")
         screen.innerText=`${v}`;
 
     }
@@ -88,13 +89,17 @@ function evaluatValue(v){
             }
             else{
                 if (ch=='+' || ch=='-') {
-                    let a=val.pop();
+                    let a=0;
+                    let b=0;
+                    let opr='';
+                    while (op.length!=0) {
+                        a=val.pop();
                     if (val.length==0) {
                         screen.innerText="syntax error";
                         return "";
                     }
-                    let b=val.pop();
-                    let opr=op.pop();
+                       b=val.pop();
+                       opr=op.pop();
                     if (opr=='/') {
                         val.push(b/a);
                     }
@@ -107,6 +112,7 @@ function evaluatValue(v){
                     else{
                         val.push(b-a);
                     }
+                }
                 }
                 else{
 
